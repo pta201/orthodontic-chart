@@ -1,7 +1,5 @@
 "use client";
-import Chart from "@/pages/main/Chart";
-import Form from "@/pages/main/Form";
-import { OrthodonticDTO } from "@/pages/main/scheme";
+import { Chart, Form, OrthodonticDTO } from "@/modules/main";
 import { useState } from "react";
 
 export default function Home() {
@@ -18,7 +16,6 @@ export default function Home() {
       <main className="flex  gap-16 row-start-2 items-center sm:items-start">
         <Form onSubmit={handleSubmit} />
         <Chart
-          key={chartData.cooperate + chartData.incooperate}
           cooperate={chartData.cooperate}
           incooperate={chartData.incooperate}
         />

@@ -23,11 +23,11 @@ interface Props {
   incooperate: number;
 }
 
-const Chart = ({ cooperate = 0, incooperate = 0 }: Props) => {
-  const lengends = ["Success percentage (%)"];
+export const Chart = ({ cooperate = 0, incooperate = 0 }: Props) => {
+  const legends = ["Success percentage (%)"];
 
   const data = {
-    labels: lengends,
+    labels: legends,
     datasets: [
       {
         label: "Cooperate",
@@ -48,6 +48,7 @@ const Chart = ({ cooperate = 0, incooperate = 0 }: Props) => {
 
   const options = {
     responsive: true,
+
     plugins: {
       legend: {
         position: "bottom" as const,
@@ -70,5 +71,3 @@ const Chart = ({ cooperate = 0, incooperate = 0 }: Props) => {
 
   return <Bar data={data} options={options} />;
 };
-
-export default Chart;

@@ -6,7 +6,7 @@ interface Props {
   onSubmit: (data: OrthodonticDTO) => void;
 }
 
-const Form = ({ onSubmit }: Props) => {
+export const Form = ({ onSubmit }: Props) => {
   const {
     handleSubmit,
     register,
@@ -68,5 +68,3 @@ const Form = ({ onSubmit }: Props) => {
     </div>
   );
 };
-
-export default Form;
